@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Composições Musicais de Ferreira Luiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Composições Musicais de Ferreira Luiz</h1>
+            
+            <div class="image-container">
+                <div class="image-placeholder" onclick="document.getElementById('imageInput').click()">
+                    <div>📷</div>
+                    <div style="margin-top: 8px;">Clique para adicionar</div>
+                    <div style="font-size: 0.8rem;">uma foto</div>
+                    <button class="image-upload-btn">Escolher Imagem</button>
+                </div>
+                <input type="file" id="imageInput" accept="image/*" onchange="loadImage(event)">
+            </div>
+            
+            <p class="subtitle">Uma jornada através da genialidade musical</p>
+        </header>
+
+        <div class="content">
+            <div class="text-section">
+                <p>Ferreira Luiz é um compositor brasileiro eclético, sensível e procura trazer, pelas suas composições, sentimentos, emoções, reflexões e inspiração para quem conhece a obra e escuta suas músicas.</p>
+
+                <p>Seu principal objetivo como compositor de vários estilos é alcançar as mais variadas sensações e encontrar a máxima reflexão sobre suas letras e canções. Pode transacionar entre estilos diferentes e traz a voz da alma em cada canção realizada, pensada e escrita. Do estilo combatente e revolto de uma letra de Rock a sensações extremamente suaves e sensíveis através de suas canções de MPB.</p>
+
+                <p>O processo criativo do compositor revela um cuidado em expressar muitas vezes seu cotidiano, suas revoltas internas, seu eu incompreendido, a sua, muitas vezes, indignação com o real doloroso. onde cada nota e cada pausa são cuidadosamente consideradas. Suas obras demonstram uma sensibilidade artística que toca profundamente a alma do ouvinte.</p>
+
+                <p>A influência de Ferreira Luiz na música contemporânea estende-se muito além de suas próprias composições. Ele tem inspirado uma nova geração de músicos e compositores, que encontram em sua obra um exemplo de como a tradição e a inovação podem coexistir harmoniosamente, criando algo verdadeiramente próximo do real.</p>
+            </div>
+
+            <div class="genre-nav">
+                <a href="mpb.html" class="genre-link mpb">
+                    <span class="genre-icon">🎵</span>
+                    <span class="genre-text">Composições MPB</span>
+                </a>
+                <a href="sertanejo.html" class="genre-link sertanejo">
+                    <span class="genre-icon">🎸</span>
+                    <span class="genre-text">Composições Sertanejas</span>
+                </a>
+                <a href="rock.html" class="genre-link rock">
+                    <span class="genre-icon">🤘</span>
+                    <span class="genre-text">Composições Rock</span>
+                </a>
+            </div>
+
+            <div class="videos-section">
+                <h2>Vídeos das Composições</h2>
+                
+                <div class="videos-grid">
+                    <div class="video-card" id="card1">
+                        <div class="video-placeholder">🎵 Vídeo 1</div>
+                        <input type="url" class="video-input" placeholder="Cole aqui o link do YouTube..." data-card="1">
+                        <button class="add-video-btn" onclick="addVideo(1)">Adicionar Vídeo</button>
+                    </div>
+
+                    <div class="video-card" id="card2">
+                        <div class="video-placeholder">🎵 Vídeo 2</div>
+                        <input type="url" class="video-input" placeholder="Cole aqui o link do YouTube..." data-card="2">
+                        <button class="add-video-btn" onclick="addVideo(2)">Adicionar Vídeo</button>
+                    </div>
+
+                    <div class="video-card" id="card3">
+                        <div class="video-placeholder">🎵 Vídeo 3</div>
+                        <input type="url" class="video-input" placeholder="Cole aqui o link do YouTube..." data-card="3">
+                        <button class="add-video-btn" onclick="addVideo(3)">Adicionar Vídeo</button>
+                    </div>
+
+                    <div class="video-card" id="card4">
+                        <div class="video-placeholder">🎵 Vídeo 4</div>
+                        <input type="url" class="video-input" placeholder="Cole aqui o link do YouTube..." data-card="4">
+                        <button class="add-video-btn" onclick="addVideo(4)">Adicionar Vídeo</button>
+                    </div>
+
+                    <div class="video-card" id="card5">
+                        <div class="video-placeholder">🎵 Vídeo 5</div>
+                        <input type="url" class="video-input" placeholder="Cole aqui o link do YouTube..." data-card="5">
+                        <button class="add-video-btn" onclick="addVideo(5)">Adicionar Vídeo</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-section">
+                <h2>Entre em Contato</h2>
+                <p class="contact-subtitle">Interessado nas composições de Ferreira Luiz? Entre em contato conosco!</p>
+                
+                <form class="contact-form" onsubmit="submitForm(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Assunto</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Selecione um assunto</option>
+                                <option value="licensing">Licenciamento</option>
+                                <option value="collaboration">Colaboração</option>
+                                <option value="other">Outros</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Conte-nos mais sobre seu interesse nas composições de Ferreira Luiz..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Enviar Mensagem</button>
+                </form>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <div class="contact-details">
+                            <strong>E-mail</strong>
+                            <p>ferreiraluiz.compositor@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        <div class="contact-details">
+                            <strong>Telefone</strong>
+                            <p>(11) 97561-1178</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
